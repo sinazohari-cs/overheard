@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OVERHEARD — Always Listening</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="app">
+
+    <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+    <header class="header">
+      <div class="header-brand">
+        <span class="logo" title="Double-click to reset">OVERHEARD</span>
+        <span class="tagline">your device is always listening. we just made it visible.</span>
+      </div>
+      <div class="header-meta">
+        <div class="infection-bar-wrap" title="Grid infection level">
+          <div class="infection-bar" id="infectionBar"></div>
+        </div>
+        <div class="status-pill" id="statusPill">
+          <span class="status-dot" id="statusDot"></span>
+          <span class="status-label" id="statusLabel">IDLE</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ════════════════════════════ MAIN LAYOUT ═════════════════════════════ -->
+    <div class="layout">
+
+      <!-- ─────────────────────────── SIDEBAR ─────────────────────────────── -->
+      <aside class="sidebar">
+
+        <!-- Voice Input -->
+        <section class="panel">
+          <div class="panel-header">
+            <span>VOICE INPUT</span>
+            <span class="panel-badge" id="speechBadge">CHROME REQUIRED</span>
+          </div>
+          <button class="mic-button" id="micButton">
+            <div class="mic-rings" id="micRings">
+              <div class="ring r1"></div>
+              <div class="ring r2"></div>
+              <div class="ring r3"></div>
+            </div>
+            <div class="mic-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8"  y1="23" x2="16" y2="23"/>
+              </svg>
+            </div>
+            <span class="mic-label" id="micLabel">CLICK TO SPEAK</span>
+          </button>
+          <div class="live-transcript" id="liveTranscript"></div>
+        </section>
+
+        <!-- Text Input -->
+        <section class="panel">
+          <div class="panel-header">
+            <span>TEXT INPUT</span>
+            <span class="panel-hint">Ctrl+Enter to analyze</span>
+          </div>
+          <textarea
+            id="textInput"
+            class="text-input"
+            placeholder="Or type anything here...&#10;&#10;e.g. &quot;I was telling my friend about going hiking in the mountains this weekend, and then maybe hitting a coffee shop after&quot;"
+          ></textarea>
+          <button class="analyze-button" id="analyzeButton">▶ ANALYZE TEXT</button>
+        </section>
+
+        <!-- Detected Keywords -->
+        <section class="panel">
+          <div class="panel-header">
+            <span>DETECTED TOPICS</span>
+            <span class="keyword-count" id="keywordCount">0</span>
+          </div>
+          <div class="keywords-container" id="keywordsContainer">
+            <span class="empty-hint">Topics will surface as you speak...</span>
+          </div>
+        </section>
+
+        <!-- Algorithm Log -->
+        <section class="panel panel-log">
+          <div class="panel-header">
+            ALGORITHM LOG <span class="log-blink">█</span>
+          </div>
+          <div class="log-container" id="logContainer"></div>
+        </section>
+
+      </aside>
+
+      <!-- ──────────────────────────── FEED GRID ───────────────────────────── -->
+      <main class="feed">
+        <div class="feed-grid" id="feedGrid"></div>
+        <div class="feed-overlay" id="feedOverlay">
+          <div class="overlay-content">
+            <div class="overlay-icon">👁</div>
+            <div class="overlay-text">ANALYZING YOUR WORDS</div>
+            <div class="overlay-sub">Stand by...</div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

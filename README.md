@@ -10,11 +10,11 @@ It listens to what you say (or reads what you type), extracts meaningful keyword
 
 ## Demo
 
-To run it locally:
-\`\`\`bash
+```bash
 cd overheard
 python3 -m http.server 8000
-# open http://localhost:8000 in Chrome\`\`\`
+# open http://localhost:8000 in Chrome
+```
 
 ---
 

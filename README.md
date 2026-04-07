@@ -9,7 +9,7 @@ It listens to what you say (or reads what you type), extracts meaningful keyword
 ---
 
 ## Demo
-
+To run locally, download all the files into a directory cd into it and use Python to run it:
 ```bash
 cd overheard
 python3 -m http.server 8000

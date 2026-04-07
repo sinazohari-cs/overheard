@@ -10,11 +10,11 @@ It listens to what you say (or reads what you type), extracts meaningful keyword
 
 ## Demo
 
-https://github.com/user-attachments/assets/placeholder
-
-> Try saying: *"I was telling my friend about hiking in the mountains this summer, and then maybe stopping at a coffee shop on the way back."*
-> 
-> Watch the grid fill with mountains, trails, and espresso.
+To run it locally:
+\`\`\`bash
+cd overheard
+python3 -m http.server 8000
+# open http://localhost:8000 in Chrome\`\`\`
 
 ---
 

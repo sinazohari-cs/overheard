@@ -1,6 +1,5 @@
 # OVERHEARD
 
-> *Your device is always listening. We just made it visible.*
 
 **OVERHEARD** is an interactive browser experiment that recreates that uncanny feeling of talking about something random with a friend — and then seeing a suspiciously relevant ad pop up moments later.
 
